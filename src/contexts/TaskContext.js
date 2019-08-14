@@ -1,0 +1,24 @@
+import React, { createContext, useState } from 'react';
+import uuid from "uuid/v1";
+
+export const TaskContext = createContext();
+
+const TaskContextProvider = (props) => {
+    const [tasks, setTasks] = useState([
+        {name: "Buy milk", date: "10.08.2019", id: 1},
+        {name: "Watch movie", date: "16.07.2020", id: 1}
+    ]);
+    const addTask = (name, date) => {
+        setTasks([...tasks, {name, date, id: uuid() }]);
+    };
+    const removeTask = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id));
+    };
+    return (
+        <TaskContextProvider value={{tasks, addTask, removeTask}}>
+            {props.children}
+        </TaskContextProvider>
+    )
+}
+
+export default TaskContextProvider;
