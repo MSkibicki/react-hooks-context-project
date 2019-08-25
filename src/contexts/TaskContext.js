@@ -5,8 +5,8 @@ export const TaskContext = createContext();
 
 const TaskContextProvider = (props) => {
     const [tasks, setTasks] = useState([
-        {name: "Buy milk", date: "10.08.2019", id: 1},
-        {name: "Watch movie", date: "16.07.2020", id: 1}
+        {name: "Buy milk", date: "10.08.2019", id: uuid()},
+        {name: "Watch movie", date: "16.07.2020", id: uuid()}
     ]);
     const addTask = (name, date) => {
         setTasks([...tasks, {name, date, id: uuid() }]);
@@ -15,9 +15,9 @@ const TaskContextProvider = (props) => {
         setTasks(tasks.filter((task) => task.id !== id));
     };
     return (
-        <TaskContextProvider value={{tasks, addTask, removeTask}}>
+        <TaskContext.Provider value={{tasks, addTask, removeTask}}>
             {props.children}
-        </TaskContextProvider>
+        </TaskContext.Provider>
     )
 }
 

@@ -4,6 +4,7 @@ import { TaskContext } from '../contexts/TaskContext';
 
 const Menu = () => {
     const { tasks } = useContext(TaskContext);
+
     return(
         <div className="menu">
             <h1>Task List</h1>

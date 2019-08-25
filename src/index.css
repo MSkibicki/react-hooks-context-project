@@ -19,3 +19,14 @@ body {
 .menu h1 {
     margin: 15px 0;
 }
+
+.task {
+    display: flex;
+    margin: 5px 2px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
