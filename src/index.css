@@ -1,32 +1,80 @@
 body {
     margin: 0;
-    background: #445588;
+    background: darkgray;
+    padding: 0;
 }
 
 .App {
-    background: #469082;
-    margin: 30px auto;
-    width: 90%;
-    color: #eee;
+    color: black;
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .menu {
     text-align: center;
-    background: #478987;
-    padding: 15px 30px;
+    background: lightgray;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    margin: 1.3rem 0.5rem;
 }
 
 .menu h1 {
-    margin: 15px 0;
+    padding: 0.8rem;
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.menu p {
+    font-size: 1.3rem;
 }
 
 .task {
     display: flex;
     margin: 5px 2px;
+    max-width: 90%;
     padding: 10px;
     justify-content: space-between;
 }
 
+.name {
+    width: 33%;
+    font-weight: bold;
+}
+
+ul {
+    padding: 0 0.5rem;
+}
+
 li {
     list-style: none;
+    background-color: #686868;
+    margin: 0.5rem;
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+}
+
+li:hover {
+    opacity: 0.6;
+}
+
+span {
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    margin: 0.6rem 0.2rem;
+    width: 46%;
+}
+
+input[type="submit"] {
+    margin: 0.5rem auto;
+    display: block;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    width: 94%;
 }
