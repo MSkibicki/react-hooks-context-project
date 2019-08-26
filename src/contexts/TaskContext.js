@@ -4,10 +4,8 @@ import uuid from "uuid/v1";
 export const TaskContext = createContext();
 
 const TaskContextProvider = (props) => {
-    const [tasks, setTasks] = useState([
-        {name: "Buy milk", date: "10.08.2019", id: uuid()},
-        {name: "Watch movie", date: "16.07.2020", id: uuid()}
-    ]);
+    const [tasks, setTasks] = useState([]);
+    
     const addTask = (name, date) => {
         setTasks([...tasks, {name, date, id: uuid() }]);
     };

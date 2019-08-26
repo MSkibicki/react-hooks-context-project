@@ -4,7 +4,7 @@ import TaskInfo from './TaskInfo';
 
 const Tasks = () => {
    const { tasks } = useContext(TaskContext);
-   return tasks.length ? (
+   return (
     <div className="task-list">
         <ul>
             {tasks.map(task => {
@@ -14,8 +14,6 @@ const Tasks = () => {
             })}
         </ul>
     </div>
-   ) : (
-       <div className="empty">Your task list is empty.</div>
    )
 }
 

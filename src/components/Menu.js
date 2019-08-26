@@ -8,7 +8,7 @@ const Menu = () => {
     return(
         <div className="menu">
             <h1>Task List</h1>
-            <p>You have {tasks.length} tasks.</p>
+            <p>{tasks.length ? `You have ${tasks.length} task(s)` : `Your task list is empty. Please add a new task.`}</p>
         </div>
     );
 }
