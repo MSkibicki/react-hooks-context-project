@@ -3,13 +3,15 @@ import { TaskContext } from "../contexts/TaskContext";
 
 const AddTaskForm = () => {
     
-    const { addTask } = useContext(TaskContext);
+    const { dispatch } = useContext(TaskContext);
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
 
     const submitHandler = e => {
         e.preventDefault();
-        addTask(name, date);
+        dispatch({type: "ADD_TASK", task: {
+            name, date
+        }});
         setName("");
         setDate("");
     }
