@@ -5,6 +5,7 @@ export const tasksReducer = (state, action) => {
         case "ADD_TASK":
             return [...state, {
                 name: action.task.name,
+                details: action.task.details,
                 date: action.task.date,
                 id: uuid()
             }]

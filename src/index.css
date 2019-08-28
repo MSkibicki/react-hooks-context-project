@@ -29,12 +29,23 @@ body {
     font-size: 1.3rem;
 }
 
-.task {
+.task-main {
     display: flex;
     margin: 5px 2px;
     max-width: 90%;
     padding: 10px;
     justify-content: space-between;
+}
+
+.task-details {
+    padding: 0.2rem;
+    background-color: #d3d3d3;
+    border-radius: 0.4rem;
+    width: 98%;
+    margin: 0.1rem auto;
+    font-style: italic;
+    flex-wrap: wrap;
+    word-wrap: break-word;
 }
 
 .name {
@@ -70,11 +81,24 @@ input[type="text"] {
     width: 46%;
 }
 
+input[type="date"] {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    margin: 0.6rem 0.2rem;
+    width: 46%;
+    font-size: 0.94rem;
+}
+
 input[type="submit"] {
     margin: 0.5rem auto;
     display: block;
     padding: 0.5rem;
     border: 0;
     border-radius: 0.5rem;
-    width: 94%;
+    width: 93%;
+}
+
+input[type="text"].input-details {
+    width: 93%;
 }
