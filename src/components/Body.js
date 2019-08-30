@@ -13,11 +13,11 @@ const Body = () => {
 
     return(
         <div className="app-body" style={{background: mode.body}}>
+            <SlideButton />
             <div className="app-content">
                 <Menu />
                 <Tasks />
                 <Form />
-                <SlideButton />
             </div>
         </div>
     );

@@ -3,10 +3,18 @@ import { ModeContext } from "../contexts/ModeContext";
 
 const Button = () => {
 
-    const { toggleState } = useContext(ModeContext);
+    const { darkMode, dark, light, toggleState } = useContext(ModeContext);
+    const mode = darkMode ? dark : light;
+
 
     return(
-        <button onClick={toggleState}>Toggle</button>
+        <div className="checkbox">
+            <p className="theme-text" style={{color: mode.color}}>Change Theme:</p>
+                <label className="switch">
+                    <input type="checkbox" onChange={toggleState}/>
+                    <span className="slider"></span>
+                </label>
+        </div>
     );
 }
 

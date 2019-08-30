@@ -5,6 +5,7 @@ body {
 
 .app-body {
     background: darkgray;
+    padding-bottom: 1rem;
 }
 
 .app-content {
@@ -17,7 +18,7 @@ body {
     text-align: center;
     padding: 1.3rem;
     border-radius: 1rem;
-    margin: 1.3rem 0.5rem;
+    margin: 1.6rem 0.5rem;
 }
 
 .menu h1 {
@@ -106,4 +107,68 @@ input[type="submit"]:hover {
 
 input[type="text"].input-details {
     width: 93%;
+}
+
+.switch {
+    display: inline-block;
+    height: 1.8rem;
+    width: 3.5rem;
+    position: relative;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    background: lightgray;
+    transition: 0.2s;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    transition: 0.2s;
+    background: white;
+    width: 1.3rem;
+    height: 1.3rem;
+    bottom: 0.25rem;
+    left: 0.3rem;
+}
+
+input:checked + .slider {
+    background: #2196f3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.6rem);
+}
+
+span.slider {
+    border-radius: 1.1rem;
+}
+
+span.slider:before {
+    border-radius: 50%;
+}
+
+.theme-text {
+    margin-right: 0.5rem;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1.5rem;
+    align-items: center;
+    padding-top: 1rem;
 }
