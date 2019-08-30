@@ -1,17 +1,17 @@
 import React from 'react';
 import TaskContextProvider from './contexts/TaskContext';
-import Menu from './components/Menu';
-import Tasks from './components/Tasks';
-import Form from './components/Form';
+import ModeContextProvider from './contexts/ModeContext';
+import Body from './components/Body';
+
 
 const App = () => {
   return (
     <div className="App">
-      <TaskContextProvider>
-        <Menu />
-        <Tasks />
-        <Form />
-      </TaskContextProvider>
+        <ModeContextProvider>
+          <TaskContextProvider>
+            <Body />
+          </TaskContextProvider>
+        </ModeContextProvider>
     </div>
   );
 }

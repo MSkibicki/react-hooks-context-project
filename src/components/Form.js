@@ -1,7 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { TaskContext } from "../contexts/TaskContext";
+import { ModeContext } from '../contexts/ModeContext';
 
-const AddTaskForm = () => {
+const Form = () => {
+
+    const { darkMode, dark, light } = useContext(ModeContext);
+    const mode = darkMode ? dark : light;
     
     const { dispatch } = useContext(TaskContext);
     const [name, setName] = useState("");
@@ -20,15 +24,15 @@ const AddTaskForm = () => {
 
     return (
         <form onSubmit={submitHandler}>
-            <input type="text" placeholder="Please Enter Task" value={name}
+            <input type="text" style={{background: mode.li, color: mode.color}} placeholder="Please Enter Task" value={name}
                 onChange={(e) => setName(e.target.value)} required />
-            <input type="date" placeholder="Please Enter Date" value={date}
+            <input type="date" style={{background: mode.li, color: mode.color}} placeholder="Please Enter Date" value={date}
                 onChange={(e) => setDate(e.target.value)} required />
-            <input type="text" placeholder="Please Enter Details" className="input-details" value={details}
+            <input type="text" style={{background: mode.li, color: mode.color}} placeholder="Please Enter Details (optional)" className="input-details" value={details}
                 onChange={(e) => setDetails(e.target.value)} />
-            <input type="submit" value="Add"/>
+            <input type="submit" style={{background: mode.taskDetails, color: mode.color}} value="Add"/>
         </form>
     );
 }
 
-export default AddTaskForm;
+export default Form;
