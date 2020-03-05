@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Rubik', sans-serif;
 }
 
 .app-body {
@@ -10,7 +13,7 @@ body {
 }
 
 .app-content {
-  width: 85%;
+  width: 55%;
   margin: 0 auto;
   text-align: center;
 }
@@ -50,28 +53,35 @@ body {
   word-wrap: break-word;
 }
 
+form {
+  width: 65%;
+  margin: 0 auto;
+}
+
 .name {
   width: 33%;
   font-weight: bold;
 }
 
 ul {
+  width: 80%;
   padding: 0 0.5rem;
+  margin: 0 auto;
 }
 
 li {
   list-style: none;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   padding: 0.3rem;
   border-radius: 0.6rem;
 }
 
-li:hover {
-  opacity: 0.6;
-}
-
 span {
   cursor: pointer;
+}
+
+span:hover {
+  color: #fff4f1;
 }
 
 input[type="text"] {
@@ -79,7 +89,7 @@ input[type="text"] {
   border: 0;
   border-radius: 0.5rem;
   margin: 0.6rem 0.2rem;
-  width: 46%;
+  width: 43%;
 }
 
 input[type="date"] {
@@ -87,7 +97,7 @@ input[type="date"] {
   border: 0;
   border-radius: 0.5rem;
   margin: 0.6rem 0.2rem;
-  width: 46%;
+  width: 43%;
   font-size: 0.94rem;
   cursor: pointer;
 }
@@ -98,7 +108,7 @@ input[type="submit"] {
   padding: 0.5rem;
   border: 0;
   border-radius: 0.5rem;
-  width: 93%;
+  width: 92%;
   cursor: pointer;
 }
 
@@ -107,7 +117,7 @@ input[type="submit"]:hover {
 }
 
 input[type="text"].input-details {
-  width: 93%;
+  width: 90%;
 }
 
 .switch {

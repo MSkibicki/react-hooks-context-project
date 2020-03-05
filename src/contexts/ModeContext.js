@@ -14,10 +14,10 @@ class ModeContextProvider extends Component {
       height: "min-content"
     },
     light: {
-      body: "darkgray",
-      menu: "lightgray",
-      taskDetails: "#d3d3d3",
-      li: "#686868",
+      body: "#f3eed9",
+      menu: "#fff4f1",
+      taskDetails: "#fff4f1",
+      li: "#ed6560",
       color: "black",
       height: "min-content"
     }
