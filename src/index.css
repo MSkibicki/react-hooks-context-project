@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+
+span {
+  cursor: pointer;
+}
+
+span:hover {
+  color: #fff4f1;
 }
 
 .app-body {
@@ -12,7 +19,7 @@ body {
   padding-bottom: 1rem;
 }
 
-.app-content {
+.app-body .app-content {
   width: 55%;
   margin: 0 auto;
   text-align: center;
@@ -35,21 +42,44 @@ body {
   font-size: 1.3rem;
 }
 
-.task-main {
+ul {
+  width: 80%;
+  padding: 0 0.5rem;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style: none;
+  margin: 1rem 0.5rem;
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+}
+
+ul li .task-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 5px 2px;
   max-width: 90%;
   padding: 10px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.task-details {
+ul li .task-main .name {
+  width: 33%;
+  font-weight: bold;
+}
+
+ul li .task-details {
   padding: 0.2rem;
   border-radius: 0.4rem;
   width: 98%;
   margin: 0.1rem auto;
   font-style: italic;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   word-wrap: break-word;
 }
 
@@ -58,41 +88,15 @@ form {
   margin: 0 auto;
 }
 
-.name {
-  width: 33%;
-  font-weight: bold;
-}
-
-ul {
-  width: 80%;
-  padding: 0 0.5rem;
-  margin: 0 auto;
-}
-
-li {
-  list-style: none;
-  margin: 1rem 0.5rem;
-  padding: 0.3rem;
-  border-radius: 0.6rem;
-}
-
-span {
-  cursor: pointer;
-}
-
-span:hover {
-  color: #fff4f1;
-}
-
-input[type="text"] {
+form input[type="text"] {
   padding: 0.5rem;
   border: 0;
   border-radius: 0.5rem;
   margin: 0.6rem 0.2rem;
-  width: 43%;
+  width: 44.5%;
 }
 
-input[type="date"] {
+form input[type="date"] {
   padding: 0.5rem;
   border: 0;
   border-radius: 0.5rem;
@@ -102,7 +106,11 @@ input[type="date"] {
   cursor: pointer;
 }
 
-input[type="submit"] {
+form input[type="text"].input-details {
+  width: 90%;
+}
+
+form input[type="submit"] {
   margin: 0.5rem auto;
   display: block;
   padding: 0.5rem;
@@ -112,12 +120,8 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+form input[type="submit"]:hover {
   opacity: 0.6;
-}
-
-input[type="text"].input-details {
-  width: 90%;
 }
 
 .switch {
@@ -127,29 +131,33 @@ input[type="text"].input-details {
   position: relative;
 }
 
-.switch input {
+.switch .switch input {
   display: none;
 }
 
-.slider {
+.switch .slider {
   background: lightgray;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  border-radius: 1.1rem;
 }
 
 .slider:before {
   content: "";
   position: absolute;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   background: white;
   width: 1.3rem;
   height: 1.3rem;
   bottom: 0.25rem;
   left: 0.3rem;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -157,19 +165,13 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  -webkit-box-shadow: 0 0 1px #2196f3;
+          box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
-  transform: translateX(1.6rem);
-}
-
-span.slider {
-  border-radius: 1.1rem;
-}
-
-span.slider:before {
-  border-radius: 50%;
+  -webkit-transform: translateX(1.6rem);
+          transform: translateX(1.6rem);
 }
 
 .theme-text {
@@ -177,9 +179,16 @@ span.slider:before {
 }
 
 .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-right: 1.5rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 1rem;
 }
+/*# sourceMappingURL=index.css.map */
