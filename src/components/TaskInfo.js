@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { TaskContext } from "../contexts/TaskContext";
 import { ModeContext } from "../contexts/ModeContext";
+import "../components/TaskInfo.scss";
 
 const TaskInfo = ({ task }) => {
   const { dispatch } = useContext(TaskContext);

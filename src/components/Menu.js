@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { TaskContext } from "../contexts/TaskContext";
 import { ModeContext } from "../contexts/ModeContext";
+import "../components/Menu.scss";
 
 const Menu = () => {
   const { tasks } = useContext(TaskContext);

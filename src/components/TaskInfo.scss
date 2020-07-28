@@ -1,0 +1,43 @@
+li {
+  list-style: none;
+  margin: 1rem 0.5rem;
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+
+  .task-main {
+    display: flex;
+    margin: 5px 2px;
+    max-width: 90%;
+    padding: 15px;
+    justify-content: space-between;
+
+    .name {
+      width: 33%;
+      font-weight: bold;
+    }
+  }
+
+  .task-details {
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    width: 98%;
+    margin: 0.1rem auto;
+    font-style: italic;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 550px) {
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 850px) {
+  li {
+    overflow-wrap: break-word;
+  }
+}

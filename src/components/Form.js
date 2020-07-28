@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { TaskContext } from "../contexts/TaskContext";
 import { ModeContext } from "../contexts/ModeContext";
+import "../components/Form.scss";
 
 const Form = () => {
   const { darkMode, dark, light } = useContext(ModeContext);
@@ -11,15 +12,15 @@ const Form = () => {
   const [date, setDate] = useState("");
   const [details, setDetails] = useState("");
 
-  const submitHandler = e => {
+  const submitHandler = (e) => {
     e.preventDefault();
     dispatch({
       type: "ADD_TASK",
       task: {
         name,
         date,
-        details
-      }
+        details,
+      },
     });
     setName("");
     setDate("");
@@ -33,7 +34,7 @@ const Form = () => {
         style={{ background: mode.li, color: mode.color }}
         placeholder="Please Enter Task"
         value={name}
-        onChange={e => setName(e.target.value)}
+        onChange={(e) => setName(e.target.value)}
         required
       />
       <input
@@ -41,7 +42,7 @@ const Form = () => {
         style={{ background: mode.li, color: mode.color }}
         placeholder="Please Enter Date"
         value={date}
-        onChange={e => setDate(e.target.value)}
+        onChange={(e) => setDate(e.target.value)}
         required
       />
       <input
@@ -50,7 +51,7 @@ const Form = () => {
         placeholder="Please Enter Details (optional)"
         className="input-details"
         value={details}
-        onChange={e => setDetails(e.target.value)}
+        onChange={(e) => setDetails(e.target.value)}
       />
       <input
         type="submit"

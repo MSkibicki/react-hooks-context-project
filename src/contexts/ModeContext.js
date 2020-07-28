@@ -11,16 +11,14 @@ class ModeContextProvider extends Component {
       taskDetails: "#4779bf",
       li: "#1b4785",
       color: "lightgray",
-      height: "min-content"
     },
     light: {
-      body: "#f3eed9",
+      body: "#a9a9a9",
       menu: "#fff4f1",
       taskDetails: "#fff4f1",
       li: "#ed6560",
       color: "black",
-      height: "min-content"
-    }
+    },
   };
 
   toggleState = () => {

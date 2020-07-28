@@ -1,0 +1,56 @@
+form {
+  width: 65%;
+  margin: 0 auto;
+
+  input[type="text"] {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    margin: 0.6rem 0.2rem;
+    width: 44.5%;
+  }
+
+  input[type="date"] {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    margin: 0.6rem 0.2rem;
+    width: 43%;
+    font-size: 0.94rem;
+    cursor: pointer;
+  }
+
+  input[type="text"].input-details {
+    width: 90%;
+  }
+
+  input[type="submit"] {
+    margin: 0.5rem auto;
+    display: block;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    width: 92%;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 1000px) {
+  form {
+    input[type="text"].input-details {
+      width: 87%;
+    }
+
+    input[type="date"] {
+      width: 87%;
+    }
+
+    input[type="text"] {
+      width: 87%;
+    }
+  }
+}
